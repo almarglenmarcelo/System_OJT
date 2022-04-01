@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import thesisService from "../services/thesis.service";
 import "../sass/modals/_editmodal.scss";
+import AnimatedPage from '../components/AnimatedPage'
 
 const Edit_Modal = ({ modalToggle, singleThesis }) => {
   //Use States for Modal
@@ -137,6 +138,7 @@ const Edit_Modal = ({ modalToggle, singleThesis }) => {
   };
 
   return ReactDom.createPortal(
+    <AnimatedPage>
     <div className="container">
       <div>
         <ToastContainer
@@ -156,6 +158,7 @@ const Edit_Modal = ({ modalToggle, singleThesis }) => {
         keyboard={false}
         onHide={handleClose}
         size="lg"
+        backdrop = "static"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         dialogClassName="AddModal"
@@ -462,7 +465,8 @@ const Edit_Modal = ({ modalToggle, singleThesis }) => {
             </Row> */}
         </Modal.Body>
       </Modal>
-    </div>,
+    </div>
+    </AnimatedPage>,
     document.getElementById("modal-root")
   );
 };

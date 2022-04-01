@@ -3,11 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import folder_logo from "../assets/folder_logo.png";
 import Footer from "../components/Footer";
 import Navigationbar from "../components/NavigationBar";
+import AnimatedPage from "../components/AnimatedPage";
 const Landing = () => {
   return (
+   
     <>
       {" "}
       <Navigationbar />
+      <AnimatedPage>
       <Container
         fluid="md"
         className="container_landing mt-5 d-flex justify-content-center align-items-center"
@@ -38,8 +41,10 @@ const Landing = () => {
           </Col>
         </Row>
       </Container>
+      </AnimatedPage>
       <Footer />
     </>
+   
   );
 };
 

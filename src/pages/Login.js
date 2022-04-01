@@ -7,6 +7,7 @@ import logo from "../assets/login.png";
 import Navigationbar from "../components/NavigationBar";
 import ForgotPassword from "./Forgot_Pass";
 import ForgotPass_Modal from "../Modals/ForgotPass_Modal";
+import AnimatedPage from "../components/AnimatedPage";
 
 const Login = ({ setIsAuth }) => {
   const [email, setEmail] = useState("");
@@ -57,8 +58,10 @@ const Login = ({ setIsAuth }) => {
   };
 
   return (
+    
     <>
       <Navigationbar />
+      <AnimatedPage>
       <Container fluid="md" className="landing_container">
         <Row>
           <Col
@@ -147,7 +150,9 @@ const Login = ({ setIsAuth }) => {
           </Col>
         </Row>
       </Container>
+      </AnimatedPage>
     </>
+    
   );
 };
 

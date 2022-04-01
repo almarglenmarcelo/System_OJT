@@ -7,6 +7,7 @@ import Navigationbar from "../components/NavigationBar";
 import { useUserAuth } from "../context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
 import { compileStringAsync } from "sass";
+import AnimatedPage from "../components/AnimatedPage";
 
 const Guest = () => {
   const [email, setEmail] = useState("");
@@ -53,8 +54,10 @@ const Guest = () => {
     }
   };
   return (
+    
     <>
       <Navigationbar />
+      <AnimatedPage>
       <Container fluid="sm" className="guest_container">
         <Row>
           <Col
@@ -126,7 +129,9 @@ const Guest = () => {
           </Col>
         </Row>
       </Container>
+      </AnimatedPage>
     </>
+  
   );
 };
 
